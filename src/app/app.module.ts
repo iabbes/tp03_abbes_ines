@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { ComposantTetiereComponent } from './composant-tetiere/composant-tetiere
 import { ComposantFooterComponent } from './composant-footer/composant-footer.component';
 import { ComposantFormulaireComponent } from './composant-formulaire/composant-formulaire.component';
 import { ComposantRecapDataComponent } from './composant-recap-data/composant-recap-data.component';
+import { ComposantAfficherAvionComponent } from './composant-afficher-avion/composant-afficher-avion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NumberDirective } from './number.directive';
 import { StringDirective } from './string.directive';
@@ -21,6 +23,7 @@ import { EmailDirective } from './email.directive';
     ComposantFooterComponent,
     ComposantFormulaireComponent,
     ComposantRecapDataComponent,
+    ComposantAfficherAvionComponent,
     NumberDirective,
     StringDirective,
     PhoneNumberPipe,
@@ -31,7 +34,9 @@ import { EmailDirective } from './email.directive';
     BrowserModule,
     AppRoutingModule, 
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

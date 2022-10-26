@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ComposantAfficherAvionComponent } from './composant-afficher-avion/composant-afficher-avion.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
