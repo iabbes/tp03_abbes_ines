@@ -1,16 +1,13 @@
-<div *ngIf="catalog">
-    <div *ngFor="let item of catalog">
-        <p>
-            {{item.id}}
-        </p>
-        <p>
-            {{item.airplane}}
-        </p>
-        <p>
-            {{item.type}}
-        </p>
-        <p>
-            {{item.price}}
-        </p>
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="../../assets/avion.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{plane.airplane}}</h5>
+            <p class="card-text">{{plane.id}}<br>{{plane.type}}<br>{{plane.price}}</p>
+            <a href="#" class="btn btn-primary">Go (coming soon)</a>
+        </div>
     </div>
-</div>
+
+
+
