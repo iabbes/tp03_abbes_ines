@@ -12,23 +12,22 @@ import { PlaneService } from '../services/plane.service';
 export class ComposantListAvionComponent implements OnInit {
   searchText: any;
   plane$ !: Observable<Plane[]>;
+  planeFilter$ !: Observable<Plane[]>;
   private destroy$!: Subject<boolean>;
 
   constructor(private planeService: PlaneService) { }
 
   ngOnInit(): void {
     this.plane$ = this.planeService.getAllPlanes();
-
+    this.planeFilter$ = this.plane$
     this.destroy$ = new Subject<boolean>();
   }
 
   filter(name) {
-    /*
-    return this.plane$.pipe(
-      map(projects =>projects.filter(proj => proj.airplane === name)
+    this.plane$= this.planeFilter$.pipe(
+      map(projects =>projects.filter(proj => proj.airplane.includes(name))
       )
-    ).subscribe();*/
-    
+    );
   }
 
 

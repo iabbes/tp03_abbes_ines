@@ -4,6 +4,7 @@ import { ComposantFormulaireComponent } from './composant-formulaire/composant-f
 import { ComposantListAvionComponent } from './composant-list-avion/composant-list-avion.component';
 
 const routes: Routes = [
+  { path: '', component: ComposantFormulaireComponent },
   { path: 'formulaire', component: ComposantFormulaireComponent },
   { path: 'listPlane', component: ComposantListAvionComponent }
 ];
