@@ -15,6 +15,8 @@ import { StringDirective } from './string.directive';
 import { PhoneNumberPipe } from './phone-number.pipe';
 import { FirstCapitalLetterPipe } from './first-capital-letter.pipe';
 import { EmailDirective } from './email.directive';
+import { ComposantListAvionComponent } from './composant-list-avion/composant-list-avion.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { EmailDirective } from './email.directive';
     StringDirective,
     PhoneNumberPipe,
     FirstCapitalLetterPipe,
-    EmailDirective
+    EmailDirective,
+    ComposantListAvionComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { EmailDirective } from './email.directive';
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

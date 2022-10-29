@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CatalogueService } from 'services/catalogue.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Avion  } from 'src/objets/avion';
+import { Plane } from '../models/plane.model';
+import { PlaneService } from '../services/plane.service';
 
 @Component({
   selector: 'app-composant-afficher-avion',
@@ -9,12 +10,12 @@ import { Avion  } from 'src/objets/avion';
 })
 export class ComposantAfficherAvionComponent implements OnInit {
 
-  catalog !: Avion[];
-  constructor(private  service: CatalogueService) { }
+  @Input() plane!: Plane;
+
+  constructor(private  planeService: PlaneService) { }
 
   ngOnInit(): void {
-    const catalogString = this.service.getCatalogue();
-    const catalog = JSON.parse(catalogString);
+
   }
 
 }
