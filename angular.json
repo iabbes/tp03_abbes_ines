@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tp02_abbes_ines": {
+    "tp03_abbes_ines": {
       "projectType": "application",
       "schematics": {},
       "root": "",
